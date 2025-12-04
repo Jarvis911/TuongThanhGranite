@@ -55,7 +55,7 @@ export default function Home() {
       <section className="py-20 container mx-auto px-4">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-2">Bộ Sưu Tập Mới</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold mb-2">Bộ Sưu Tập Mới</h2>
             <p className="text-muted-foreground">Những mẫu đá được tuyển chọn kỹ lưỡng nhất tháng này.</p>
           </div>
           <Button variant="link" className="hidden md:inline-flex text-lg">
@@ -89,7 +89,7 @@ export default function Home() {
       {/* 4. CALL TO ACTION (CTA) - Phần chốt đơn cuối trang */}
       <section className="py-24 bg-[#1a1a1a] text-white text-center">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-light mb-6">
             Bạn đã sẵn sàng kiến tạo không gian?
           </h2>
           <p className="text-white/70 text-lg mb-10 font-light">
@@ -97,9 +97,9 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg rounded-none">
-              Tư vấn Zalo: 09xx.xxx.xxx
+              Tư vấn Zalo: 0905.340.052
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-none">
+            <Button size="lg" variant="outline" className="border-white text-black px-8 py-6 text-lg rounded-none">
               Gửi yêu cầu báo giá
             </Button>
           </div>

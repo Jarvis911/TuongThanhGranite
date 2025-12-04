@@ -29,7 +29,7 @@ export function ServicesSection() {
     <section className="py-20 bg-stone-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Dịch Vụ Toàn Diện</h2>
+          <h2 className="text-3xl md:text-4xl font-light mb-4">Dịch Vụ Toàn Diện</h2>
           <div className="h-1 w-20 bg-primary mx-auto" />
         </div>
         
@@ -39,7 +39,7 @@ export function ServicesSection() {
               <div className="mb-6 inline-flex p-4 rounded-full bg-stone-100 group-hover:bg-black group-hover:text-white transition-colors duration-300">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+              <h3 className="text-xl font-medium mb-3">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {item.desc}
               </p>

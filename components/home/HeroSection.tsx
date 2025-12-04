@@ -32,14 +32,14 @@ export function HeroSection() {
         <div className="flex gap-4 justify-center pt-4 animate-fade-in-up delay-300">
           <Button
             size="lg"
-            className="bg-white text-black hover:bg-gray-200 rounded-none px-8 font-semibold"
+            className="bg-white text-black border-white border hover:bg-white/60 rounded-none px-8 font-semibold"
           >
             Xem Bộ Sưu Tập
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="text-black border-white hover:bg-white/20 rounded-none px-8"
+            className="text-black border-white hover:bg-white/60 rounded-none px-8"
           >
             Liên Hệ Báo Giá <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

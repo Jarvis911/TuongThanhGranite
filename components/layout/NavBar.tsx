@@ -48,7 +48,7 @@ export function Navbar() {
           <span className={cn("font-light text-xl tracking-wide", 
             isScrolled ? "text-black" : "text-white"
           )}>
-            TƯỜNG THANH GRANITE
+            TƯỜNG THANH <span className={!isScrolled ? "text-white" : "text-[#c0a062]"}>GRANITE</span>
           </span>
         </Link>
 
@@ -59,7 +59,7 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               className={cn(
-                "text-sm font-medium uppercase tracking-wider hover:text-[#c0a062] transition-colors relative group",
+                "text-sm font-light uppercase tracking-wider hover:text-[#c0a062] transition-colors relative group",
                 isScrolled ? "text-gray-800" : "text-white/90"
               )}
             >
@@ -77,10 +77,10 @@ export function Navbar() {
           </Button>
           <Button 
             className={cn(
-              "rounded-none font-semibold px-6",
+              "rounded-lg font-semibold px-6 bg-transparent",
               !isScrolled 
                 ? "bg-transparent text-white hover:scale-100" 
-                : "bg-white text-black hover:bg-gray-200"
+                : "text-black hover:bg-gray-200"
             )}
           >
             <Phone className="mr-2 h-4 w-4" /> Báo giá

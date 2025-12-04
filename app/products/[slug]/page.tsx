@@ -13,7 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-// Mock Data (Thực tế bạn sẽ fetch từ API/Database dựa trên slug)
+// DỮ LIỆU MẪU ĐÃ CẬP NHẬT ẢNH THẬT (ONLINE)
 const product = {
   name: "Volakas White Marble",
   origin: "Hy Lạp (Greece)",
@@ -28,10 +28,11 @@ const product = {
     { label: "Độ cứng (Mohs)", value: "3-4" },
     { label: "Độ hút nước", value: "0.18%" },
   ],
+  // Link ảnh online từ Unsplash
   images: [
-    "/images/volakas-1.jpg", // Ảnh chính
-    "/images/volakas-zoom.jpg", // Ảnh zoom vân
-    "/images/volakas-living-room.jpg", // Ảnh phối cảnh
+    "https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?q=80&w=2000&auto=format&fit=crop", // Ảnh 1: Vân đá gần
+    "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=2000&auto=format&fit=crop", // Ảnh 2: Góc khác
+    "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop", // Ảnh 3: Phối cảnh phòng khách
   ],
 };
 
@@ -39,10 +40,10 @@ export default function ProductDetailPage() {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
-    <div className="min-h-screen bg-white pb-20 pt-24"> {/* Padding top cho Navbar */}
+    <div className="min-h-screen bg-white pb-20 pt-24">
       <div className="container mx-auto px-4">
         
-        {/* Breadcrumb đơn giản */}
+        {/* Breadcrumb */}
         <nav className="flex items-center text-sm text-muted-foreground mb-8">
           <span className="hover:text-black cursor-pointer">Trang chủ</span>
           <ChevronRight className="h-4 w-4 mx-2" />
@@ -80,7 +81,7 @@ export default function ProductDetailPage() {
                     selectedImage === idx ? "border-black opacity-100" : "border-transparent opacity-60 hover:opacity-100"
                   }`}
                 >
-                  <Image src={img} alt="Thumbnail" fill className="object-cover" />
+                  <Image src={img} alt={`Thumbnail ${idx}`} fill className="object-cover" />
                 </button>
               ))}
             </div>
@@ -88,7 +89,7 @@ export default function ProductDetailPage() {
 
           {/* RIGHT COLUMN: INFO */}
           <div className="lg:col-span-5 flex flex-col h-full">
-            <div className="sticky top-24"> {/* Sticky để cuộn theo ảnh */}
+            <div className="sticky top-24"> 
               
               <div className="mb-2 text-sm uppercase tracking-widest text-gray-500 font-semibold">
                 {product.type} — {product.origin}
@@ -119,7 +120,7 @@ export default function ProductDetailPage() {
 
               <Separator className="my-6" />
 
-              {/* Thông số kỹ thuật & Chính sách (Dùng Accordion) */}
+              {/* Accordion */}
               <Accordion type="single" collapsible className="w-full" defaultValue="specs">
                 <AccordionItem value="specs" className="border-b-gray-200">
                   <AccordionTrigger className="font-serif text-lg hover:no-underline">
